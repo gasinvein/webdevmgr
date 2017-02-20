@@ -1,0 +1,13 @@
+^_VHOSTNAME_ {
+	#include <abstractions/apache2-common>
+	/var/www/_VHOSTNAME_/ rw,
+	/var/www/_VHOSTNAME_/** rwm,
+	/var/log/apache2/_VHOSTNAME_.*.log w,
+	unix,
+	/run/mysqld/mysqld.sock rw,
+	/etc/ld.so.cache r,
+	/usr/share/zoneinfo/ r,
+	/usr/share/zoneinfo/** r,
+	/tmp/.Zend* rwk,
+	/var/lib/php/sessions/** rwk,
+}
